@@ -1,0 +1,30 @@
+.list-container {
+    
+}
+
+.note-container {
+    border-bottom: solid thin;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.date {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.add-btn {
+    margin: auto 0;
+}

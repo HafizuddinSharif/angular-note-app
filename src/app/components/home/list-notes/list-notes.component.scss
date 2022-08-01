@@ -1,0 +1,19 @@
+.list-container {
+    
+}
+
+.logo-container {
+    border-bottom: solid thin;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.add-btn {
+    margin: auto 0;
+}
