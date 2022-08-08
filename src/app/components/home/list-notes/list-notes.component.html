@@ -1,5 +1,12 @@
 <div class="logo-container">
     <h1 class="logo">Second Brain</h1>
-    <span class="add-btn">Add</span>
+    <div>
+        <button (click)="onLogout()" class="add-btn">
+            <span class="material-symbols-outlined icon">logout</span>
+        </button>
+        <button (click)="onAdd()" class="add-btn">
+            <span class="material-symbols-outlined icon">add</span>
+        </button>
+    </div>
 </div>
-<app-note></app-note>
+<app-note (openNoteId)="getNoteId($event)" (deleteNoteId)="getDeleteNoteId($event)"></app-note>
