@@ -1,5 +1,56 @@
-.editor {
+.note-title {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 20px 0 20px 15px;
+    width: 90%;
+}
+
+.editor-container {
     height: 100%;
     background: rgb(63,94,251);
     background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-editor {
+    height: 70%;
+}
+
+.editor {
+    background-color: white;
+    height: 90%;
+    margin: 0 20px;
+}
+
+.view {
+    margin-top: 50px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(63,94,251);
+    color: white;
+    margin: 10px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    border: 1px solid;
+    border-color: rgb(63,94,251);
+    background: white;
+    color: rgb(63,94,251);
 }

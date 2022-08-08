@@ -1,3 +1,12 @@
-<div class="editor">
-    <quill-editor [styles]="{height: '200px'}"></quill-editor>
+<div class="editor-container">
+    <div class="editor">
+        <form class="form-editor" [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+            <input class="note-title" formControlName="title" type="text" placeholder="Title here...">
+            <quill-editor formControlName="editor">
+            </quill-editor>
+            <div class="btn-container">
+                <button type="Submit">Save Note!</button>
+            </div>
+        </form>
+    </div>
 </div>
