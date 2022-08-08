@@ -1,4 +1,10 @@
 <div class="container grid">
-    <app-list-notes></app-list-notes>
-    <app-text-editor></app-text-editor>
+    <app-list-notes (isEditorOpen)="openEditor($event)" (openNoteId)="getNoteId($event)"></app-list-notes>
+    <app-text-editor 
+        *ngIf="isEditorOpen2" 
+        (editorClose)="receiveData($event)" 
+        (latestNoteId)="viewNote($event)" 
+        [idSelected]="idSelected">
+    </app-text-editor>
+    <app-text-viewer *ngIf="!isEditorOpen2" [idSelected]="idSelected" (openEditor)="openEditor($event)"></app-text-viewer>
 </div>
