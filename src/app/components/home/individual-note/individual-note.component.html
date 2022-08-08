@@ -1,0 +1,17 @@
+<div class="note-container">
+    <div class="note-detail">
+        <h2 class="note-title">{{ note.title }}</h2>
+        <p class="date">{{ note.date | date:'mediumDate' }}</p>
+    </div>
+    <div class="note-option">
+        <button (click)="editNote()">
+            <span class="material-symbols-outlined icon">edit</span>
+        </button>
+        <button (click)="clickNote()">
+            <span class="material-symbols-outlined icon">open_in_new</span>
+        </button>
+        <button (click)="deleteNote()">
+            <span class="material-symbols-outlined icon">delete</span>
+        </button>
+    </div>
+</div>
