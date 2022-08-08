@@ -1,0 +1,18 @@
+.editor-container {
+    height: 100%;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.editor {
+    background-color: white;
+    height: 90%;
+    margin: 0 20px;
+}
+
+.view {
+    margin-top: 50px;
+}
