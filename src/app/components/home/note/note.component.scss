@@ -1,12 +1,9 @@
-.list-container {
-    
-}
-
 .note-container {
-    border-bottom: solid thin;
-    padding: 10px 5px;
-    display: flex;
-    justify-content: space-between;
+    &:hover {
+        .icon {
+            visibility: visible;
+        }
+    }
 }
 
 .note-detail {
@@ -27,4 +24,10 @@
 
 .add-btn {
     margin: auto 0;
+}
+
+.icon {
+    margin: auto 0;
+    visibility: hidden;
+    cursor: pointer;
 }
