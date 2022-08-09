@@ -27,8 +27,7 @@ export class AuthService {
       this.currUser = {
         id: 1,
         username: userName,
-        password: password,
-        isEditing: true
+        password: password
       }
 
       this.store.dispatch(login_user({user: this.currUser}))
