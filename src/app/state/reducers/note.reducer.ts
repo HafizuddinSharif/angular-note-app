@@ -18,7 +18,6 @@ export const initialState: Note = {
     id: 1,
     user_id: 1,
     date: new Date(),
-    status: "idle",
     title: "Entry 1",
     content: "This is from <strong>INITIAL STATE</strong>"
 } 

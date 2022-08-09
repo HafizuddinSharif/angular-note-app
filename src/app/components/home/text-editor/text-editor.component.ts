@@ -58,7 +58,6 @@ export class TextEditorComponent implements OnInit, OnChanges {
       id: this.idSelected > 0 ? this.idSelected : this.id,
       user_id: 10,
       date: new Date(),
-      status: "idle",
       title: this.title,
       content: this.content
     }
