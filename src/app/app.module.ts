@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { noteReducer } from './state/reducers/note.reducer';
+import { userReducer } from './state/reducers/user.reducer';
+import { carReducer } from './state/reducers/car.reducer';
 import { QuillModule } from "ngx-quill";
 
 import Quill from 'quill';
@@ -62,6 +64,8 @@ const routes: Routes = [
     BrowserModule,
     StoreModule.forRoot({
       note: noteReducer,
+      user: userReducer,
+      car: carReducer
     }),
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
