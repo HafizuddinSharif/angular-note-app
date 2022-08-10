@@ -6,7 +6,7 @@ import { add_note, update_note } from 'src/app/state/actions/note.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
 import { getNoteCount, selectNote } from 'src/app/state/selectors/note.selector';
-import { Observable } from 'rxjs';
+import { getUser } from 'src/app/state/selectors/user.selector';
 
 @Component({
   selector: 'app-text-editor',
@@ -17,9 +17,10 @@ export class TextEditorComponent implements OnInit, OnChanges {
 
   editorForm: FormGroup
   content: string
-  id: number;
+  id: number
   title: string
   newNote: Note
+  user_id: number
 
   randomText: string = "This is a text"
 
@@ -31,6 +32,7 @@ export class TextEditorComponent implements OnInit, OnChanges {
 
   constructor(private store: Store<AppState>) {
     store.select(getNoteCount).subscribe(count => this.id = count + 1);
+    store.select(getUser).subscribe(user => this.user_id = user.id)
     // console.log("The number produced is: ", this.id)
   }
 
@@ -56,7 +58,7 @@ export class TextEditorComponent implements OnInit, OnChanges {
 
     this.newNote = {
       id: this.idSelected > 0 ? this.idSelected : this.id,
-      user_id: 10,
+      user_id: this.user_id,
       date: new Date(),
       title: this.title,
       content: this.content
