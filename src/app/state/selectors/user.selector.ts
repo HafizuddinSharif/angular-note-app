@@ -4,7 +4,7 @@ import { User } from "../models/user.model";
 
 export const selectUser = (state: AppState) => state.user
 
-// export const selectUserIsEditing = createSelector(
-//     selectUser,
-//     (state: User) => state.isEditing
-// )
+export const getUser = createSelector(
+    selectUser,
+    (state: User) => state
+)

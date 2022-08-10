@@ -4,3 +4,4 @@ import { User } from "../models/user.model";
 import { createAction , props } from "@ngrx/store";
 
 export const login_user = createAction("[USER] Login", props<{user: User}>())
+export const logout_user = createAction("[USER] Logout")
